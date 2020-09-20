@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+
+{% endblock %}
+
+            {% block message %}
+                {% for message in app.flashes('success') %}
+                    {{ message }}
+                {% endfor %}
+            {% endblock %}
+
+{% block body %}
+    <div class="x_content" style="width: 50%; margin-left: 25%; margin-top: 10%">
+        <h3>Добавить нового поставщика</h3>
+        {{ form(form) }}
+    </div>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endblock %}

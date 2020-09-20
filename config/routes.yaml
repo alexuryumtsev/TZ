@@ -1,0 +1,19 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+product:
+  path: /products
+  controller: App\Controller\Products\ProductsController::products
+
+provider:
+  path: /provider
+  controller: App\Controller\Providers\ProvidersController::provides
+
+supplies:
+  path: /supplies
+  controller: App\Controller\Supplies\SuppliesController::supplies
+
+
+app_default_controller:
+  path: /
+  controller: App\Controller\DefaultController::default
